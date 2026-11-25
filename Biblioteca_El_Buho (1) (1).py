@@ -1108,6 +1108,12 @@ class RepositorioJSON:
                 1967, 420,
             ),
             LibroFisico(
+            "LIB-002" "Memento no morir" , 43000, 3,
+                "Marco Aurelio", "relatos" , "Editorial unica",
+                1439 , 55,
+            ),   
+            
+            LibroFisico(
                 "LIB-002", "El principito", 39000, 7,
                 "Antoine de Saint-Exupéry", "Fábula", "Salamandra", 1943, 210,
             ),
