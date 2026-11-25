@@ -146,6 +146,8 @@ class Inventario:
         return [
             libro for libro in self.libros
             if texto in _normalizar(libro.titulo) or texto in _normalizar(libro.autor)
+                                                  or texto in _normalizar(libro.genero)
+            
         ]
 
     def buscar_libros_por_año(self, año):
@@ -725,8 +727,8 @@ class Persona:
     @documento.setter
     def documento(self, valor: str) -> None:
         documento = _texto_obligatorio(valor, "documento")
-        if len(documento) > 30:
-            raise DatoInvalidoError("El documento no puede superar 30 caracteres.")
+        if len(documento) <6 or len(documento) > 30:
+            raise DatoInvalidoError("El documento tiene entre y  30 caracteres.")
         self._documento = documento
 
     @property
