@@ -1,4 +1,5 @@
-"""Biblioteca El Búho: aplicación local en un solo archivo Python."""
+"""Bienvenidos a la Biblioteca El Búho: aplicación local en un solo archivo Python."""
+
 from __future__ import annotations
 
 import json
