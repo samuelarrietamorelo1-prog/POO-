@@ -147,6 +147,18 @@ class Inventario:
             if texto in _normalizar(libro.titulo) or texto in _normalizar(libro.autor)
         ]
 
+    def buscar_libros_por_año(self, año):
+        """Busca libros publicados en un año específico."""
+        try:
+            anio = int(año)
+        except (ValueError, TypeError):
+            raise DatoInvalidoError("El año debe ser un número válido.")
+
+        return [
+            libro for libro in self.libros
+            if getattr(libro, "año_publicacion", None) == año
+        ]
+        
     def buscar_por_codigo(self, codigo: str) -> Libro | None:
         """Busca por código; recorre linealmente la colección."""
         objetivo = str(codigo).strip().casefold()
