@@ -51,6 +51,7 @@ class UsuarioNoEncontradoError(Exception):
 
 
 class PrestamoNoEncontradoError(Exception):
+    
     """No existe el préstamo solicitado."""
 
 
